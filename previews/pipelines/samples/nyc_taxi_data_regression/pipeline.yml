@@ -34,8 +34,7 @@ outputs:
 defaults:
   component_job:
     datastore: azureml:workspaceblobstore
-    compute:
-      target: azureml:cpu-cluster
+    compute: azureml:cpu-cluster
 
 jobs:
   prep-job:

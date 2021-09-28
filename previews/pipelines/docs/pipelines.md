@@ -14,8 +14,7 @@ Below is a simple Pipeline Job that runs 3 Command Component Jobs. The `jobs` se
 ```yaml
 type: pipeline_job
 
-compute:
-  target: azureml:cpu-cluster
+compute: azureml:cpu-cluster
 
 jobs:
   componentA_job:
@@ -39,8 +38,7 @@ The code and sample output for this example is available [here](../samples/3b_pi
 ```yaml
 type: pipeline_job
 
-compute:
-  target: azureml:cpu-cluster
+compute: azureml:cpu-cluster
 
 inputs:
   pipeline_sample_input_data:
@@ -116,8 +114,7 @@ outputs:
 defaults:
   component_job:
     datastore: azureml:workspaceblobstore
-    compute:
-      target: ManojCluster
+    compute: ManojCluster
 
 jobs:
   train-job:

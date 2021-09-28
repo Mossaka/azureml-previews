@@ -30,8 +30,7 @@ jobs:
   hello_python_world_job:
     type: component_job
     component: file:./component.yml
-    compute:
-      target: azureml:ManojCluster
+    compute: azureml:ManojCluster
 ```
 
 A component can take inputs and produce outputs. Inputs can be values such as strings, numbers, etc. or data in a local machine or cloud storage. Outputs can only be data which are typically files written to local directory by the script that then get saved to cloud storage. The type definition of the Inputs and Outputs is defined in the respective `inputs` and `outputs section. They are mapped to the command line parameters of the command in the `command` section. Note that the component only defines the types of Inputs and Outputs. The actual values for the Inputs and Outputs of a Component are provided in the Pipeline Job.
@@ -92,8 +91,7 @@ jobs:
   hello_python_world_job:
     type: component_job
     component: file:./component.yml
-    compute:
-      target: azureml:ManojCluster
+    compute: azureml:ManojCluster
     inputs:
       sample_input_data: inputs.pipeline_sample_input_data
       sample_input_string: inputs.pipeline_sample_input_string
@@ -121,8 +119,7 @@ jobs:
   hello_python_world_job:
     type: component_job
     component: azureml:Hello_Python_World:1
-    compute:
-      target: azureml:ManojCluster
+    compute: azureml:ManojCluster
     inputs:
       sample_input_data: inputs.pipeline_sample_input_data
       sample_input_string: inputs.pipeline_sample_input_string

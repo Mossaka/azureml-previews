@@ -20,8 +20,7 @@ outputs:
 code:
   local_path: ./train_src
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu:5
-compute:
-  target: azureml:cpu-cluster
+compute: azureml:cpu-cluster
 command: >-
   python train.py 
   --training_data {inputs.training_data} 
